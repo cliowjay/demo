@@ -6,7 +6,7 @@ const getMenu = () => {
     const links = [
         {node : '/', head : '首頁'}, 
         {node : '/store', head : '商店'}, 
-        {node : '/members', head : '會員'}, 
+        //{node : '/members', head : '會員'}, 
     ];
     let menu = '';
     links.map((item) => {
