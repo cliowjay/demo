@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const route = express.Router();
+const ipMgr = require('./ipMgr');
+console.log(JSON.stringify(ipMgr));
 
 const getMenu = () => {
     const links = [
@@ -17,7 +19,7 @@ const getMenu = () => {
 }
 
 route.get('/', (req, res) => {
-    const html = `<h1>Web App首頁</h1>
+    const html = `IP:${JSON.stringify(ipMgr)}<h1>Web App首頁</h1>
     ${getMenu()}
     `;
 
