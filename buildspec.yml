@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - echo "NodeJS 16 installing"
+
+  pre_build:
+    commands:
+      - echo "[pre_build]"
+
+  build:
+    commands:
+      - echo "[build start time] `date`"
+      - node -v
+
+  post_build:
+    commands:
+      - echo "[build finish time] `date`"
+
+artifacts:
+  files:
+    - "**/*"
+  exclude-paths:
+    - ".git/*.*"
+
+name: demo
